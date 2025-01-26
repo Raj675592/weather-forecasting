@@ -15,10 +15,4 @@ This is a simple weather forecasting web application where users can search for 
 
 You can access the live demo of the project here: [Weather Forecasting Web](https://raj675592.github.io/weather-forecasting/)
 
-## Installation
 
-To run the project locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Raj675592/weather-forecasting.git
