@@ -1,5 +1,5 @@
-const API_KEY = "90119504e3774922a56171756252601"; 
-const BASE_URL = "https://www.weatherapi.com/docs/#";
+const API_KEY = "02e997953dd0f5f536619ca2d19e3420"; 
+const BASE_URL = "http://api.weatherstack.com/current";
 
 
 document.getElementById("searchBtn").addEventListener("click", () => {
