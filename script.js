@@ -3,7 +3,7 @@ const BASE_URL = "https://api.weatherstack.com/current";
 
 
 document.getElementById("searchBtn").addEventListener("click", () => {
-    const city = document.getElementById("cityInput").value.trim(); // Get the city input
+    const city = document.getElementById("cityInput").value.trim(); 
 
 
     if (city === "") {
