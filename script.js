@@ -28,8 +28,20 @@ document.getElementById("searchBtn").addEventListener("click", () => {
                 return;
             }
 
-            // Get the weather description
+            // Get the weather description and weather icon
             const weatherDescription = data.current.weather_descriptions[0].toLowerCase();
+            const weatherIcon = data.current.weather_icons[0];
+
+            // Change background color based on weather
+            if (weatherDescription.includes("rain")) {
+                document.body.style.backgroundColor = "#a1c4fd"; // Blueish for rain
+            } else if (weatherDescription.includes("clear")) {
+                document.body.style.backgroundColor = "#ffcc99"; // Light orange for clear weather
+            } else if (weatherDescription.includes("cloud")) {
+                document.body.style.backgroundColor = "#d3d3d3"; // Light grey for cloudy weather
+            } else {
+                document.body.style.backgroundColor = "#f0f0f0"; // Default color for unknown conditions
+            }
 
             // Display weather information
             const weatherInfo = `
@@ -39,7 +51,7 @@ document.getElementById("searchBtn").addEventListener("click", () => {
                 <p><strong>Weather:</strong> ${data.current.weather_descriptions[0]}</p>
                 <p><strong>Humidity:</strong> ${data.current.humidity}%</p>
                 <p><strong>Wind Speed:</strong> ${data.current.wind_speed} km/h</p>
-                <img src="${data.current.weather_icons[0]}" alt="Weather Icon">
+                <img src="${weatherIcon}" alt="Weather Icon">
             `;
             document.getElementById("weather").innerHTML = weatherInfo;
 
@@ -55,8 +67,10 @@ document.getElementById("searchBtn").addEventListener("click", () => {
                     return;
                 }
 
-                // Construct the message with weather details
-                const message = `Hi, the weather in ${data.location.name} is currently ${data.current.weather_descriptions[0]}. Temperature: ${data.current.temperature}°C, Feels Like: ${data.current.feelslike}°C, Humidity: ${data.current.humidity}%, Wind Speed: ${data.current.wind_speed} km/h.`;
+                // Construct the message with weather details and description
+                const message = `Hi, the weather in ${data.location.name} is currently ${data.current.weather_descriptions[0]}. 
+                Temperature: ${data.current.temperature}°C, Feels Like: ${data.current.feelslike}°C, 
+                Humidity: ${data.current.humidity}%, Wind Speed: ${data.current.wind_speed} km/h.`;
 
                 // Create the WhatsApp link with the encoded message
                 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
