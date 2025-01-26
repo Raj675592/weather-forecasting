@@ -8,11 +8,10 @@
 body {
     font-family: 'Arial', sans-serif;
     
-        /* background-color: #f0f0f0; Default background color */
-        /*transition: background-color 0.3s ease;*/ /* Smooth transition for color change */
+
     
     
-     background: linear-gradient(135deg, #3d33c6, rgb(116, 206, 71)); /*Soft gradient from light teal to light blue */
+     background: linear-gradient(135deg, #3d33c6, rgb(116, 206, 71)); 
     transition: background-color 0.1s ease;
     height: 100vh;
     display: flex;
@@ -40,9 +39,9 @@ body {
     background-size: cover;
   }
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 15px; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     padding: 40px;
     width: 350px;
     text-align: center;
