@@ -1,0 +1,150 @@
+/* Reset CSS to remove default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Gradient Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Soft gradient from light teal to light blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    background-size: cover;
+    background-attachment: fixed; /* Make background fixed to viewport */
+}
+
+/* Container for the main weather app */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Search Bar */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9; /* Darker blue when focused */
+    outline: none;
+}
+
+/* Search Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db; /* Blue background */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Weather Info */
+#weather {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #34495e; /* Slightly darker grey for weather text */
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Weather Icons */
+img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+/* WhatsApp Message Section */
+#whatsappInputContainer {
+    margin-top: 20px;
+    display: none;
+}
+
+#whatsappNumber {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Send Message Button */
+#sendMessageBtnContainer {
+    margin-top: 20px;
+    display: none;
+}
+
+#sendMessageBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366; /* WhatsApp green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sendMessageBtn:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+/* Additional styling for mobile responsiveness */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button, input[type="text"], #sendMessageBtn {
+        padding: 10px;
+    }
+}
